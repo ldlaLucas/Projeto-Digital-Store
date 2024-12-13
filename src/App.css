@@ -1,0 +1,150 @@
+@import url('./index.css');
+
+
+/* App.css */
+
+.header-container {
+  height: 192px;
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-white);
+}
+
+.header-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.header-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.signup-link {
+  color: var(--color-gray-dark-2); /* Cinza-escuro-2 */
+  margin-right: 15px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.signup-link:hover {
+  color: var(--color-tertiary); /* Cor terciária */
+}
+
+.primary-button {
+  background-color: var(--color-primary); /* Cor primária */
+  border: none;
+  height: 40px;
+  width: 114px;
+  margin-right: 15px;
+}
+
+.primary-button:hover {
+  background-color: var(--color-tertiary); /* Cor terciária */
+}
+
+.cart-icon {
+  font-size: 24px;
+  color: var(--color-gray-dark); /* Cinza escuro */
+}
+
+/* App.css */
+
+/* Logo */
+.logo {
+  width: 253px;
+  height: 44px;
+}
+
+/* App.css */
+
+/* Estilo para o componente de pesquisa */
+.search-container {
+  width: 559px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  width: 100%;
+  height: 40px;
+  border-radius: 8px;
+  background-color: var(--color-gray-dark-2); /* Dark Gray 2 */
+  color: var(--color-gray-dark-3); /* Dark Gray 3 */
+  padding-left: 15px;
+}
+
+.search-button {
+  background: transparent;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.search-button .search-icon {
+  font-size: 20px;
+  color: var(--color-gray-dark); /* Dark Gray */
+}
+
+/* App.css */
+
+/* Navbar */
+.navbar-container {
+  width: 422px;
+  height: 29px;
+}
+
+.navbar-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navbar-item {
+  cursor: pointer;
+  position: relative;
+  padding: 0 10px;
+}
+
+.navbar-text {
+  color: var(--color-gray-dark-2); /* Dark Gray 2 */
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.navbar-item:hover .navbar-text {
+  color: var(--color-primary); /* Cor primária ao passar o mouse */
+}
+
+.navbar-item.active .navbar-text {
+  color: var(--color-primary); /* Cor primária quando selecionado */
+}
+
+.navbar-line {
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-primary); /* Linha abaixo do item selecionado */
+  position: absolute;
+  bottom: -4px; /* Coloca a linha abaixo do item */
+  left: 0;
+}
