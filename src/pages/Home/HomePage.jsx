@@ -16,8 +16,8 @@ const HomePage = () => {
       </Section>
       <Section title="Produtos em alta" titleAlign="left">
         <ProductListing products={[
-          { name: 'Produto 1', image: 'public/product-thumb-1.png', price: 200, priceDiscount: 149.9 },
-          { name: 'Produto 2', image: 'public/product-thumb-2.png', price: 49.9 }
+          { name: 'Produto 1', image: 'public/product-thumb-1.jpeg', price: 200, priceDiscount: 149.9 },
+          { name: 'Produto 2', image: 'public/product-thumb-2.jpeg', price: 49.9 }
         ]} />
       </Section>
     </Layout>
