@@ -1,7 +1,7 @@
-const HomePages = () => {
+const HomePage = () => {
     return ( 
         <></>
      );
 }
  
-export default HomePages;
+export default HomePage;
