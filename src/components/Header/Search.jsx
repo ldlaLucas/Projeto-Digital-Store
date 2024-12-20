@@ -1,36 +1,13 @@
-import React, { useState } from 'react';
-import { InputText } from 'primereact/inputtext';
-import 'primeicons/primeicons.css';
-import '../App.css';
+import React from 'react';
+import './styles.css';
 
-const Search = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-
-  const handleSearch = () => {
-    // Acionar o evento de pesquisa aqui, por exemplo:
-    console.log('Pesquisando por:', searchTerm);
-  };
-
-  const handleKeyPress = (e) => {
-    if (e.key === 'Enter') {
-      handleSearch();
-    }
-  };
-
+const SearchBar = () => {
   return (
-    <div className="search-container p-d-flex p-ai-center p-jc-between">
-      <InputText
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-        onKeyDown={handleKeyPress}
-        placeholder="Buscar produtos"
-        className="search-input p-mr-2"
-      />
-      <button onClick={handleSearch} className="search-button p-button-text">
-      <i class="pi pi-search"></i>
-      </button>
+    <div className="search-bar">
+      <input type="text" placeholder="Buscar produtos" />
+      <button type="submit">Buscar</button>
     </div>
   );
 };
 
-export default Search;
+export default SearchBar;

@@ -1,61 +1,12 @@
-/* index.css */
-
-/* Cores principais */
-:root {
-  --color-primary: #C92071; /* Primário */
-  --color-secondary: #B5B6F2; /* Secundário */
-  --color-tertiary: #991956; /* Terciário */
-  --color-error: #EE4266; /* Erro */
-  --color-success: #52CA76; /* Sucesso */
-  --color-warning: #F6AA1C; /* Aviso */
-  
-  /* Tons de cinza */
-  --color-gray-dark: #1F1F1F; /* Cinza escuro */
-  --color-gray-dark-2: #474747; /* Cinza-escuro-2 */
-  --color-gray-dark-3: #666666; /* Cinza-escuro-3 */
-  --color-gray-light: #8F8F8F; /* Cinza claro */
-  --color-gray-light-2: #CCCCCC; /* Cinza-claro-2 */
-  --color-gray-light-3: #F5F5F5; /* Cinza-claro-3 */
-  --color-white: #FFFFFF; /* Branco */
-}
-
-/* Exemplo de uso das variáveis */
 body {
   font-family: Arial, sans-serif;
-  background-color: var(--color-gray-light-3);
-  color: var(--color-gray-dark);
+  margin: 0;
+  padding: 0;
+  background-color: var(--light-gray-3);
 }
 
-a {
-  color: var(--color-primary);
-  text-decoration: none;
-}
-
-a:hover {
-  color: var(--color-tertiary);
-}
-
-button {
-  background-color: var(--color-primary);
-  color: var(--color-white);
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: var(--color-tertiary);
-}
-
-button:focus {
-  outline: none;
-}
-
-.error-text {
-  color: var(--color-error);
-}
-
-.success-text {
-  color: var(--color-success);
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }

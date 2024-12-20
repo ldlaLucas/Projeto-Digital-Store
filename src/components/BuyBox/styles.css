@@ -1,0 +1,31 @@
+.buy-box {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.buy-box .price {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.buy-box .price.original {
+  text-decoration: line-through;
+  color: var(--light-gray);
+}
+
+.buy-box .price.discount {
+  color: var(--dark-gray);
+}
+
+.buy-box button {
+  padding: 10px 20px;
+  background-color: var(--primary);
+  color: var(--white);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.buy-box button:hover {
+  background-color: var(--tertiary);
+}

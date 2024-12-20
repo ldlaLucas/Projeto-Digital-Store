@@ -1,16 +1,13 @@
-import './App.css';
-import Header from './components/Header';
-import Layout from './pages/Layout';
 import React from 'react';
-import Logo from './components/Logo';
+import './App.css';
+import Paths from './Routes/Paths';
 
-function App() {
-
+const App = () => {
   return (
-    <>
-        <Header />
-    </>
-  )
-}
+    <div className="app">
+      <Paths />
+    </div>
+  );
+};
 
-export default App
+export default App;

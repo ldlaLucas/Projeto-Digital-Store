@@ -1,9 +1,11 @@
 import React from 'react';
 import './styles.css';
 
-const BuyBox = ({ price, priceDiscount }) => {
+const ProductCard = ({ image, name, price, priceDiscount }) => {
   return (
-    <div className="buy-box">
+    <div className="product-card">
+      <img src={image} alt={name} />
+      <h3>{name}</h3>
       {priceDiscount ? (
         <>
           <p className="price original">R${price}</p>
@@ -12,9 +14,8 @@ const BuyBox = ({ price, priceDiscount }) => {
       ) : (
         <p className="price">R${price}</p>
       )}
-      <button type="button">Adicionar ao Carrinho</button>
     </div>
   );
 };
 
-export default BuyBox;
+export default ProductCard;

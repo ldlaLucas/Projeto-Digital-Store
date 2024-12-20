@@ -1,0 +1,10 @@
+.product-listing-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.product-listing-page .filter-group {
+  margin-bottom: 20px;
+}

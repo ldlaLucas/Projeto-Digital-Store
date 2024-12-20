@@ -1,30 +1,16 @@
-import React, { useState } from 'react';
-import '../App.css';
+import React from 'react';
+import './styles.css';
 
 const NavBar = () => {
-  const [activeTab, setActiveTab] = useState('');
-
-  const handleTabClick = (tab) => {
-    setActiveTab(tab);
-  };
-
   return (
-    <div className="navbar-container">
-      <ul className="navbar-list p-d-flex p-ai-center p-jc-start">
-        {['Home', 'Produtos', 'Categorias', 'Meus Pedidos'].map((tab) => (
-          <li
-            key={tab}
-            className={`navbar-item ${activeTab === tab ? 'active' : ''}`}
-            onClick={() => handleTabClick(tab)}
-          >
-            <span className={`navbar-text ${activeTab === tab ? 'active-text' : ''}`}>
-              {tab}
-            </span>
-            {activeTab === tab && <div className="navbar-line" />}
-          </li>
-        ))}
+    <nav className="navigation">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/products">Produtos</a></li>
+        <li><a href="/categories">Categorias</a></li>
+        <li><a href="/orders">Meus Pedidos</a></li>
       </ul>
-    </div>
+    </nav>
   );
 };
 

@@ -1,0 +1,23 @@
+.section {
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.section-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.section-title.center {
+  text-align: center;
+}
+
+.section-title.left {
+  text-align: left;
+}
+
+.section-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

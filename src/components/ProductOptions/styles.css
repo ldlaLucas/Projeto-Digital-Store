@@ -1,0 +1,20 @@
+.product-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.option {
+  margin: 10px 0;
+}
+
+.option label {
+  margin-right: 10px;
+}
+
+.option select {
+  padding: 5px;
+  border: 1px solid var(--light-gray-2);
+  border-radius: 4px;
+}
