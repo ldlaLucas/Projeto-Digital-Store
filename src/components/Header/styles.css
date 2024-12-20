@@ -1,8 +1,10 @@
+@import url('../../Variables.css');
+
 /*HEADER*/
 
 .header {
-  background-color: var(--dark-gray);
-  color: var(--white);
+  background-color: var(--white);
+  color: var(--dark-gray-2);
   padding: 20px;
   text-align: center;
 }
@@ -54,10 +56,11 @@
 
 .navigation a {
   text-decoration: none;
-  color: var(--white);
+  color: var(--dark-gray-2);
   font-weight: bold;
 }
 
 .navigation a:hover {
-  color: var(--secondary);
+  color: var(--primary);
+  text-decoration: underline;
 }

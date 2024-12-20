@@ -7,20 +7,20 @@
   --error: #EE4266; /* Erro */
   --success: #52CA76; /* Sucesso */
   --warning: #F6AA1C; /* Aviso */
-  --gray-dark: #1F1F1F; /* Cinza escuro */
-  --gray-dark-2: #474747; /* Cinza-escuro-2 */
-  --gray-dark-3: #666666; /* Cinza-escuro-3 */
-  --gray-light: #8F8F8F; /* Cinza claro */
-  --gray-light-2: #CCCCCC; /* Cinza-claro-2 */
-  --gray-light-3: #F5F5F5; /* Cinza-claro-3 */
+  --dark-gray: #1F1F1F; /* Cinza escuro */
+  --dark-gray-2: #474747; /* Cinza-escuro-2 */
+  --dark-gray-3: #666666; /* Cinza-escuro-3 */
+  --light-gray: #8F8F8F; /* Cinza claro */
+  --light-gray-2: #CCCCCC; /* Cinza-claro-2 */
+  --light-gray-3: #F5F5F5; /* Cinza-claro-3 */
   --white: #FFFFFF; /* Branco */
 }
 
 /* Exemplo de uso das variáveis */
 body {
   font-family: Arial, sans-serif;
-  background-color: var(--gray-light-3);
-  color: var(--gray-dark);
+  background-color: var(--light-gray-3);
+  color: var(--dark-gray);
 }
 
 a {
