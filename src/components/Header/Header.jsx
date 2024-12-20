@@ -7,7 +7,7 @@ import NavBar from './NavBar';
 const Header = () => {
   return (
     <header className="header">
-      <Logo />
+      <Logo type='header' />
       <Search />
       <NavBar />
     </header>

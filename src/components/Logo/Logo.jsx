@@ -1,8 +1,10 @@
 import React from 'react';
-import logo from '../../assets/logo-header.svg';
+import logoHeader from '../../assets/logo-header.svg';
+import logoFooter from '../../assets/logo-footer.svg';
 import './styles.css';
 
-const Logo = () => {
+const Logo = ({type}) => {
+  const logo = type === 'header'? logoHeader : logoFooter;
   return (
     <img src={logo} alt="Logo" className="logo" />
   );

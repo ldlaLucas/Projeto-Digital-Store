@@ -5,7 +5,7 @@ import Logo from '../Logo/Logo';
 const Footer = () => {
   return (
     <footer className="footer">
-      <Logo />
+      <Logo type="footer"/>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       <div className="social-icons">
         {/* SVGs for social media icons */}
