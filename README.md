@@ -81,8 +81,11 @@ src/
 Se você tiver dúvidas ou sugestões, entre em contato:
 
 E-mail: ldlaconcursos@gmail.com
+
 E-mail: henrique.pedro62@aluno.ifce.com
+
 LinkedIn: https://www.linkedin.com/in/lucas-augusto-a752872b5
+
 LinkedIn: https://www.linkedin.com/in/-dev-suporte-profissional-ti-pedro-b2680a302/
 
 ---
