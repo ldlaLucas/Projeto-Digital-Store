@@ -1,0 +1,22 @@
+@import url('../../Variables.css');
+
+.sectionCategory{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.category{
+  height: 104px;
+  width: 104px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.collection-category{
+ display: flex;
+ justify-content: center;
+ padding: 48px;
+ width: 720px;
+ height: 138px;
+}
