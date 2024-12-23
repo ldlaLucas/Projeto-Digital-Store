@@ -1,10 +1,8 @@
 .logo {
+  width: 253px;
+  height: 44px;
+  padding: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.logo img {
-  width: 100px;
-  height: auto;
 }

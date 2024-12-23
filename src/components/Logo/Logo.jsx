@@ -6,7 +6,7 @@ import './styles.css';
 const Logo = ({type}) => {
   const logo = type === 'header'? logoHeader : logoFooter;
   return (
-    <img src={logo} alt="Logo" className="logo" />
+    <img src={logo} className="logo" />
   );
 };
 
