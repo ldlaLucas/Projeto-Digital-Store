@@ -3,9 +3,12 @@ import "./styles.css";
 import Logo from "../Logo/Logo";
 import Search from "./Search";
 import NavBar from "./NavBar";
+import {useCart} from "../ShoppingCart/ShoppingCart";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
-  const [cartCount, setCartCount] = useState(0); //simulando carrinho de compras
+  const { cartItems } = useCart();
+  const navigate = useNavigate();
 
   return (
     <header className="header">
@@ -15,9 +18,9 @@ const Header = () => {
         <div className="auth-buttons">
           <button className="register-button">Cadastrar</button>
           <button className="login-button">Entrar</button>
-          <div className="icon-with-indicator">
-            <span className="indicator ">{cartCount}</span>
-            <i className="icon pi pi-shopping-cart"></i>
+          <div className="icon-with-indicator" onClick={() =>navigate("/productsCart")}>
+            <span className="indicator ">{cartItems.length}</span>
+            <i className="icon pi pi-shopping-cart" />
           </div>
         </div>
       </div>

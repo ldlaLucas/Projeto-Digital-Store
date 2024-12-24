@@ -1,7 +1,16 @@
-import React from 'react';
-import './styles.css';
+import React from "react";
+import PropTypes from "prop-types";
+import "./styles.css";
+import { useCart } from "../ShoppingCart/ShoppingCart";
 
-const BuyBox = ({ price, priceDiscount }) => {
+const BuyBox = ({ id, image, name, price, priceDiscount }) => {
+  const { addToCart } = useCart();
+
+  const handleAddToCart = () => {
+    const product = { id, image, name, price, priceDiscount };
+    addToCart(product);
+  };
+
   return (
     <div className="buy-box">
       {priceDiscount ? (
@@ -12,9 +21,17 @@ const BuyBox = ({ price, priceDiscount }) => {
       ) : (
         <p className="price">R${price}</p>
       )}
-      <button type="button">Adicionar ao Carrinho</button>
+      <button onClick={handleAddToCart}>Adicionar ao Carrinho</button>
     </div>
   );
+};
+
+BuyBox.propTypes = {
+  id: PropTypes.number.isRequired,
+  image: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  priceDiscount: PropTypes.number,
 };
 
 export default BuyBox;
