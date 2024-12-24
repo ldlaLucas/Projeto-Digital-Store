@@ -46,8 +46,7 @@ src/
 │   ├── Header/
 │   ├── Footer/
 │   ├── Logo/
-│   ├── SearchBar/
-│   ├── Navigation/
+│   ├── ShoppingCart
 │   ├── ProductListing/
 │   ├── ProductCard/
 │   ├── ProductOptions/
@@ -60,7 +59,8 @@ src/
 ├── pages/
 │   ├── HomePage/
 │   ├── ProductViewPage/
-│   └── ProductListingPage/
+│   ├── ProductListingPage/
+|   └── OrdersPage/
 ├── Routes/
 ├── App.jsx
 ├── Index.css
@@ -100,6 +100,6 @@ Obrigado por conferir nosso projeto! Esperamos que você aproveite a experiênci
 
 ---
 
-💻 Desenvolvido por Lucas Augusto, Pedro Henriqu e Steicie Aleixo! 
+💻 Desenvolvido por Lucas Augusto, Pedro Henrique e Steicie Aleixo! 
 
 ```
