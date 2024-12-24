@@ -84,9 +84,13 @@ E-mail: ldlaconcursos@gmail.com
 
 E-mail: henrique.pedro62@aluno.ifce.com
 
+E-mail: steiciealeixosousa@gmail.com
+
 LinkedIn: https://www.linkedin.com/in/lucas-augusto-a752872b5
 
 LinkedIn: https://www.linkedin.com/in/-dev-suporte-profissional-ti-pedro-b2680a302/
+
+Linkedin: https://www.linkedin.com/in/steicie-aleixo-sousa-6053231a7/
 
 ---
 
@@ -96,6 +100,6 @@ Obrigado por conferir nosso projeto! Esperamos que você aproveite a experiênci
 
 ---
 
-💻 Desenvolvido por Lucas Augusto, e Pedro Henrique! 
+💻 Desenvolvido por Lucas Augusto, Pedro Henriqu e Steicie Aleixo! 
 
 ```
