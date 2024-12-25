@@ -1,22 +1,100 @@
-@import url('../../../src/Variables.css');
-
+/* Estilo para a página de visualização de produto */
 .product-view-page {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
 }
 
-.back-button {
-  margin-bottom: 20px;
-  padding: 10px 20px;
-  background-color: var(--primary);
-  color: white;
+/* Estilo para o conteúdo principal */
+.main-content {
+  display: flex;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+/* Estilo para a galeria de imagens */
+.gallery {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-image {
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 1rem;
+}
+
+.thumbnails {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.thumbnail {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* Estilo para a BuyBox */
+.buy-box {
+  flex: 1;
+  padding: 1rem;
+  background-color: var(--neutral-background);
+  border-radius: 8px;
+}
+
+.buy-box h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.buy-box .rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.buy-box .price {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.price-discount {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+.price-original {
+  font-size: 1.2rem;
+  text-decoration: line-through;
+  color: var(--secondary-color);
+}
+
+.buy-box .buy-button {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary-color);
+  color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
 }
 
-.back-button:hover {
-  background-color: var(--tertiary);
+/* Estilo para a seção de produtos relacionados */
+.related-products {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.related-products h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Estilo para a paginação */
+.pagination {
+  margin-top: 1rem;
 }
