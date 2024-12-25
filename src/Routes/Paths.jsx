@@ -7,6 +7,8 @@ import OrdersPage from '../pages/OrdersPage/OrdersPage';
 import CategoryPage from '../pages/CategoryPage/CategoryPage';
 import NotFound from '../pages/NotFound/NotFound';
 import './styles.css';
+import BuyPage from '../pages/BuyPage/BuyPage';
+import BuySuccess from '../pages/BuyPage/BuySuccess';
 
 const Paths = () => {
   return (
@@ -17,6 +19,8 @@ const Paths = () => {
         <Route path="/products" element={<ProductListingPage />} />
         <Route path="/orders" element={<OrdersPage />} />
         <Route path="/categories" element={<CategoryPage />} />
+        <Route path="/buy" element={<BuyPage />} />
+        <Route path="/buy-success" element={<BuySuccess />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
