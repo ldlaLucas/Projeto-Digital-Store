@@ -24,11 +24,11 @@ const Search = () => {
   }
 
   return (
-    <div className="search-wrapper">
+    <div className="search-container">
       <IconField className="search-bar">
         <InputIcon className="pi pi-search" />
         <InputText 
-          placeholder="Buscar produtos..."
+          placeholder="Pesquisar produtos..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           onKeyPress={handleKeyPress}
