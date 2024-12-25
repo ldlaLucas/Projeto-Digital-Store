@@ -16,6 +16,21 @@
   text-align: left;
 }
 
+.section-title.right {
+  text-align: right;
+}
+
+.section-link {
+  color: var(--primary);
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.section-link:hover {
+  text-decoration: underline;
+}
+
 .section-content {
   display: flex;
   justify-content: center;

@@ -12,64 +12,72 @@ const HomePage = () => {
 
   const handleCategoryClick = (category) => {
     navigate(`/categories?category=${category}`);
-  }
+  };
 
   return (
     <Layout>
-      <Gallery
-        images={[
-          { src: "public/home-slide-1.jpeg" },
-          { src: "public/home-slide-2.jpeg" },
-          { src: "public/home-slide-3.jpeg" }
-        ]}
-        width="1440px"
-        height="681px"
-      />
-      <Section title="Coleções em destaque" titleAlign="center">
-        <img src="public/collection-1.png" alt="Coleção 1" />
-        <img src="public/collection-2.png" alt="Coleção 2" />
-        <img src="public/collection-3.png" alt="Coleção 3" />
-      </Section>
-      {/* Seção: Categorias em destaque */}
-      <Section title="Coleção em Destaque" className="sectionCategory">
-        <div className="collection-category">
-          <img
-            src="../src/assets/categoryIcons/Frame-10.svg"
-            className="collection-image category"
-            onClick={() => handleCategoryClick("camisas")}
-            alt="Camisas"
-          />
-          <img
-            src="../src/assets/categoryIcons/Frame-11.svg"
-            className="collection-image category"
-            onClick={() => handleCategoryClick("calcas")}
-            alt="Calças"
-          />
-          <img
-            src="../src/assets/categoryIcons/Frame-12.svg"
-            className="collection-image category"
-            onClick={() => handleCategoryClick("bones")}
-            alt="Bonés"
-          />
-          <img
-            src="../src/assets/categoryIcons/Frame-13.svg"
-            className="collection-image category"
-            onClick={() => handleCategoryClick("headphones")}
-            alt="Headphones"
-          />
-          <img
-            src="../src/assets/categoryIcons/Frame-14.svg"
-            className="collection-image category"
-            onClick={() => handleCategoryClick("tenis")}
-            alt="Tênis"
-          />
-        </div>
-      </Section>
-      <Section title="Produtos em alta" titleAlign="left">
-        <ProductListing
-          products={products.slice(0,8)}
+      <div className="home-page">
+        <Gallery
+          images={[
+            { src: "public/home-slide-1.jpeg" },
+            { src: "public/home-slide-2.jpeg" },
+            { src: "public/home-slide-3.jpeg" },
+            { src: "public/home-slide-4.jpeg" },
+          ]}
+          width="1440px"
+          height="681px"
         />
-      </Section>
+
+        <Section title="Coleções em destaque" titleAlign="left">
+          <div className="collections-containers">
+            <img src="public/collection-2.png" className="collection-image" />
+            <img src="public/collection-3.png" className="collection-image" />
+            <img src="public/collection-1.png" className="collection-image" />
+          </div>
+        </Section>
+        {/* Seção: Categorias em destaque */}
+        <Section title="Coleção em Destaque" titleAlign="center" >
+          <div className="collection-category">
+            <img
+              src="../src/assets/categoryIcons/Frame-10.svg"
+              className="collection-image category"
+              onClick={() => handleCategoryClick("camisas")}
+              alt="Camisas"
+            />
+            <img
+              src="../src/assets/categoryIcons/Frame-11.svg"
+              className="collection-image category"
+              onClick={() => handleCategoryClick("calcas")}
+              alt="Calças"
+            />
+            <img
+              src="../src/assets/categoryIcons/Frame-12.svg"
+              className="collection-image category"
+              onClick={() => handleCategoryClick("bones")}
+              alt="Bonés"
+            />
+            <img
+              src="../src/assets/categoryIcons/Frame-13.svg"
+              className="collection-image category"
+              onClick={() => handleCategoryClick("headphones")}
+              alt="Headphones"
+            />
+            <img
+              src="../src/assets/categoryIcons/Frame-14.svg"
+              className="collection-image category"
+              onClick={() => handleCategoryClick("tenis")}
+              alt="Tênis"
+            />
+          </div>
+        </Section>
+        <Section
+          title="Produtos em alta"
+          titleAlign="left"
+          link={{ text: "Ver todos ->", href: "/products" }}
+        >
+          <ProductListing products={products.slice(0, 8)} />
+        </Section>
+      </div>
     </Layout>
   );
 };
