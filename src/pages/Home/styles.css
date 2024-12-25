@@ -46,3 +46,8 @@
  width: 720px;
  height: 138px;
 }
+
+.navigation{
+  display: flex;
+  flex-direction:column ;
+}
