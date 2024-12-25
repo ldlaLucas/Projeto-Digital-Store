@@ -21,11 +21,11 @@ const informations = [
   {
     title: 'Categorias',
     items: [
-      { text: 'Camisetas', link: '/shirts' },
-      { text: 'Calças', link: '/pants' },
-      { text: 'Bonés', link: '/hats' },
-      { text: 'Headphones', link: '/headphones' },
-      { text: 'Tênis', link: '/shoes' }
+      { text: 'Camisetas', link: '/categories?category=camisas' },
+      { text: 'Calças', link: 'categories?category=calcas' },
+      { text: 'Bonés', link: 'categories?category=bones' },
+      { text: 'Headphones', link: 'categories?category=headphones' },
+      { text: 'Tênis', link: 'categories?category=tenis' }
     ]
   },
   {
