@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./styles.css";
 import Logo from "../Logo/Logo";
 import Search from "./Search";
@@ -18,7 +18,7 @@ const Header = () => {
         <div className="auth-buttons">
           <button className="register-button">Cadastrar</button>
           <button className="login-button">Entrar</button>
-          <div className="icon-with-indicator" onClick={() =>navigate("/productsCart")}>
+          <div className="icon-with-indicator" onClick={() =>navigate("/orders")}>
             <span className="indicator ">{cartItems.length}</span>
             <i className="icon pi pi-shopping-cart" />
           </div>

@@ -1,12 +1,12 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
-import HomePage from "../pages/Home/HomePage";
-import ProductViewPage from "../pages/ProductViewPage/ProductViewPage";
-import OrdersPage from "../pages/OrdersPage/OrdersPage";
-import ProductListingPage from "../pages/ProductListingPage/ProductListingPage";
-import "./styles.css";
-import CategoryPage from "../pages/CategoryPage/CategoryPage";
-import NotFound from "../pages/NotFound/NotFound";
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import HomePage from '../pages/Home/HomePage';
+import ProductViewPage from '../pages/ProductViewPage/ProductViewPage';
+import ProductListingPage from '../pages/ProductListingPage/ProductListingPage';
+import OrdersPage from '../pages/OrdersPage/OrdersPage';
+import CategoryPage from '../pages/CategoryPage/CategoryPage';
+import NotFound from '../pages/NotFound/NotFound';
+import './styles.css';
 
 const Paths = () => {
   return (
@@ -15,7 +15,7 @@ const Paths = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/product/:id" element={<ProductViewPage />} />
         <Route path="/products" element={<ProductListingPage />} />
-        <Route path="/productsCart" element={<OrdersPage />} />
+        <Route path="/orders" element={<OrdersPage />} />
         <Route path="/categories" element={<CategoryPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

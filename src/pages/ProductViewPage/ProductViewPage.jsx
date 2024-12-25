@@ -4,22 +4,24 @@ import Layout from "../../components/Layout/Layout";
 import ProductDetails from "../../components/ProductDetails/ProductDetails";
 import ProductOptions from "../../components/ProductOptions/ProductOptions";
 import BuyBox from "../../components/BuyBox/BuyBox";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import products from '../../components/ProductData/ProductData';
 
 const ProductViewPage = () => {
   const navigate = useNavigate();
+  const { id } = useParams();
+  const product = products.find(p => p.id === parseInt(id));
 
-  const product = {
-    name: "Produto Exemplo",
-    image: "public/product-example.png",
-    description: "Descrição detalhada do produto exemplo.",
-    price: 299.9,
-    priceDiscount: 249.9,
-    options: [
-      { name: "Cor", values: ["Vermelho", "Azul", "Verde"] },
-      { name: "Tamanho", values: ["P", "M", "G"] },
-    ],
-  };
+  if (!product) {
+    return (
+      <Layout>
+        <div className="product-view-page">
+          <h1>Produto não encontrado</h1>
+          <button onClick={() => navigate(-1)} className="back-button">Página anterior</button>
+        </div>
+      </Layout>
+    );
+  }
 
   const handleBackClick = () => {
     navigate(-1);
@@ -29,9 +31,9 @@ const ProductViewPage = () => {
     <Layout>
       <div className="product-view-page">
         <ProductDetails product={product} />
-        <ProductOptions options={product.options} />
+        {product.options && <ProductOptions options={product.options} />}
         <BuyBox price={product.price} priceDiscount={product.priceDiscount} />
-        <button onClick={handleBackClick} className="back-button"> Pagina anterior </button>
+        <button onClick={handleBackClick} className="back-button">Página anterior</button>
       </div>
     </Layout>
   );
