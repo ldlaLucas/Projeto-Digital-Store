@@ -1,17 +1,26 @@
 import React from "react";
-import './styles.css';
+import "./styles.css";
 import Layout from "../../components/Layout/Layout";
 import Gallery from "../../components/Gallery/Gallery";
 import Section from "../../components/Section/Section";
 import ProductListing from "../../components/ProductListing/ProductListing";
+import products from "../../components/ProductData/ProductData";
+import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
+  const navigate = useNavigate();
+
+  const handleCategoryClick = (category) => {
+    navigate(`/categories?category=${category}`);
+  }
+
   return (
     <Layout>
       <Gallery
         images={[
           { src: "public/home-slide-1.jpeg" },
           { src: "public/home-slide-2.jpeg" },
+          { src: "public/home-slide-3.jpeg" }
         ]}
         width="1440px"
         height="681px"
@@ -27,40 +36,38 @@ const HomePage = () => {
           <img
             src="../src/assets/categoryIcons/Frame-10.svg"
             className="collection-image category"
+            onClick={() => handleCategoryClick("camisas")}
+            alt="Camisas"
           />
           <img
             src="../src/assets/categoryIcons/Frame-11.svg"
             className="collection-image category"
+            onClick={() => handleCategoryClick("calcas")}
+            alt="Calças"
           />
           <img
             src="../src/assets/categoryIcons/Frame-12.svg"
             className="collection-image category"
+            onClick={() => handleCategoryClick("bones")}
+            alt="Bonés"
           />
           <img
             src="../src/assets/categoryIcons/Frame-13.svg"
             className="collection-image category"
+            onClick={() => handleCategoryClick("headphones")}
+            alt="Headphones"
           />
           <img
             src="../src/assets/categoryIcons/Frame-14.svg"
             className="collection-image category"
+            onClick={() => handleCategoryClick("tenis")}
+            alt="Tênis"
           />
         </div>
       </Section>
       <Section title="Produtos em alta" titleAlign="left">
         <ProductListing
-          products={[
-            {
-              name: "Produto 1",
-              image: "public/product-thumb-1.jpeg",
-              price: 200,
-              priceDiscount: 149.9,
-            },
-            {
-              name: "Produto 2",
-              image: "public/product-thumb-2.jpeg",
-              price: 49.9,
-            },
-          ]}
+          products={products.slice(0,8)}
         />
       </Section>
     </Layout>
