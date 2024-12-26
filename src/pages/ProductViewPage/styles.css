@@ -42,7 +42,6 @@
 .buy-box {
   flex: 1;
   padding: 1rem;
-  background-color: var(--neutral-background);
   border-radius: 8px;
 }
 
@@ -65,22 +64,13 @@
 
 .price-discount {
   font-size: 1.5rem;
-  color: var(--primary-color);
+  color: var(--primary);
 }
 
 .price-original {
   font-size: 1.2rem;
   text-decoration: line-through;
-  color: var(--secondary-color);
-}
-
-.buy-box .buy-button {
-  padding: 0.75rem 1.5rem;
-  background-color: var(--primary-color);
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+  color: var(--secondary);
 }
 
 /* Estilo para a seção de produtos relacionados */

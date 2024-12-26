@@ -23,13 +23,24 @@
   flex-direction: column;
 }
 
+button{
+  width: 220px;
+  height: 48px;
+  font-weight: bold;
+}
+
 .confirm-button {
   padding: 0.75rem 1.5rem;
-  background-color: var(--primary-color);
+  background-color: var(--primary);
   color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.confirm-button:hover{
+  background-color: var(--warning);
+  transform: scale(1.1);
 }
 
 /* Estilo para a página de sucesso de compra */
@@ -50,7 +61,7 @@
 
 .print-button, .home-button {
   padding: 0.75rem 1.5rem;
-  background-color: var(--primary-color);
+  background-color: var(--primary);
   color: #fff;
   border: none;
   border-radius: 4px;
