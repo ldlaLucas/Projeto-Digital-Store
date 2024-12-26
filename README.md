@@ -21,7 +21,7 @@ Para rodar o projeto localmente, siga os passos abaixo:
 
 2. Navegue até o diretório do projeto:
    ```bash
-   cd Projeto-FrontEnd
+   cd projeto-loja-virtual
    ```
 
 3. Instale as dependências:
@@ -46,7 +46,7 @@ src/
 │   ├── Header/
 │   ├── Footer/
 │   ├── Logo/
-│   ├── ShoppingCart
+│   ├── ShoppingCart/
 │   ├── ProductListing/
 │   ├── ProductCard/
 │   ├── ProductOptions/
@@ -55,9 +55,13 @@ src/
 │   ├── FilterGroup/
 │   ├── ProductDetails/
 │   ├── Layout/
+|   ├── ProductData/
 │   └── Gallery/
 ├── pages/
-│   ├── HomePage/
+│   ├── Home/
+|   ├── CategoryPage/
+|   ├── NotFound/
+|   ├── BuyPage/
 │   ├── ProductViewPage/
 │   ├── ProductListingPage/
 |   └── OrdersPage/
