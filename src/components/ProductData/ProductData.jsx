@@ -4,7 +4,7 @@ const products = [
     name: "Camiseta 1",
     image: "../../../public/product-thumb-1.jpeg",
     price: 49.9,
-    category: "camisas",
+    category: "Camisetas",
     description: "Descrição da Camiseta 1",
   },
   {
@@ -12,7 +12,7 @@ const products = [
     name: "Calça 1",
     image: "../../../public/product-thumb-2.jpeg",
     price: 99.9,
-    category: "calcas",
+    category: "Calças",
     description: "Descrição da Calça 1",
   },
   {
@@ -20,7 +20,7 @@ const products = [
     name: "Boné 1",
     image: "../../../public/product-thumb-3.jpeg",
     price: 29.9,
-    category: "bones",
+    category: "Bonés",
     description: "Descrição do Boné 1",
   },
   {
@@ -28,7 +28,7 @@ const products = [
     name: "Headphone 1",
     image: "../../../public/product-thumb-4.jpeg",
     price: 199.9,
-    category: "headphones",
+    category: "Headphones",
     description: "Descrição do Headphone 1",
   },
   {
@@ -36,7 +36,7 @@ const products = [
     name: "Tênis 1",
     image: "../../../public/product-thumb-5.jpeg",
     price: 149.9,
-    category: "tenis",
+    category: "Tênis",
     description: "Descrição do Tênis 1",
   },
   {
@@ -44,7 +44,7 @@ const products = [
     name: "Tênis 1",
     image: "../../../public/product-thumb-5.jpeg",
     price: 149.9,
-    category: "tenis",
+    category: "Tênis",
     description: "Descrição do Tênis 1",
   },
   {
@@ -52,18 +52,17 @@ const products = [
     name: "Tênis 1",
     image: "../../../public/product-thumb-5.jpeg",
     price: 149.9,
-    category: "tenis",
+    priceDiscount: 130.50,
+    category: "Tênis",
     description: "Descrição do Tênis 1",
   },
-  
-  // Adicione mais produtos conforme necessário
 
   {
     id: 7,
     name: "Camiseta 1",
     image: "../../../public/product-thumb-1.jpeg",
     price: 49.9,
-    category: "camisas",
+    category: "Camisetas",
     description: "Descrição da Camiseta 1",
   },
   {
@@ -71,7 +70,7 @@ const products = [
     name: "Calça 1",
     image: "../../../public/product-thumb-2.jpeg",
     price: 99.9,
-    category: "calcas",
+    category: "Calças",
     description: "Descrição da Calça 1",
   },
   {
@@ -79,7 +78,7 @@ const products = [
     name: "Boné 1",
     image: "../../../public/product-thumb-3.jpeg",
     price: 29.9,
-    category: "bones",
+    category: "Bonés",
     description: "Descrição do Boné 1",
   },
   {
@@ -87,7 +86,7 @@ const products = [
     name: "Headphone 1",
     image: "../../../public/product-thumb-4.jpeg",
     price: 199.9,
-    category: "headphones",
+    category: "Headphones",
     description: "Descrição do Headphone 1",
   },
   {
@@ -95,7 +94,7 @@ const products = [
     name: "Tênis 1",
     image: "../../../public/product-thumb-5.jpeg",
     price: 149.9,
-    category: "tenis",
+    category: "Tênis",
     description: "Descrição do Tênis 1",
   },
   {
@@ -103,7 +102,7 @@ const products = [
     name: "Tênis 1",
     image: "../../../public/product-thumb-5.jpeg",
     price: 149.9,
-    category: "tenis",
+    category: "Tênis",
     description: "Descrição do Tênis 1",
   },
   {
@@ -111,7 +110,7 @@ const products = [
     name: "Tênis 1",
     image: "../../../public/product-thumb-5.jpeg",
     price: 149.9,
-    category: "tenis",
+    category: "Tênis",
     description: "Descrição do Tênis 1",
   },
 ];

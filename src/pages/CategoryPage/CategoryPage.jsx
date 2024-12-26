@@ -1,71 +1,47 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './styles.css';
 import Layout from '../../components/Layout/Layout';
-import ProductCard from '../../components/ProductCard/ProductCard';
-import FilterGroup from '../../components/FilterGroup/FilterGroup';
+import Section from '../../components/Section/Section';
+import { useNavigate } from 'react-router-dom';
 import products from '../../components/ProductData/ProductData';
 
-// Componente CategoryPage para exibir produtos de uma categoria específica
-const CategoryPage = ({ category }) => {
-  // Estado para armazenar os filtros selecionados
-  const [selectedFilters, setSelectedFilters] = useState({
-    price: 'all',
-    size: 'all',
-    color: 'all',
-    brand: 'all',
-    rating: 'all',
-  });
+const categories = [
+  { name: 'Camisetas', image: '../../../src/assets/categoryIcons/iconsPng/camisa.png' },
+  { name: 'Calças', image: '../../../src/assets/categoryIcons/iconsPng/calca.png' },
+  { name: 'Bonés', image: '../../../src/assets/categoryIcons/iconsPng/bone.png' },
+  { name: 'Headphones', image: '../../../src/assets/categoryIcons/iconsPng/headphone.png' },
+  { name: 'Tênis', image: '../../../src/assets/categoryIcons/iconsPng/tenis.png' },
+];
 
-  // Função para lidar com mudanças nos filtros
-  const handleFilterChange = (filterType, value) => {
-    setSelectedFilters({
-      ...selectedFilters,
-      [filterType]: value,
-    });
+const CategoryPage = () => {
+  const navigate = useNavigate();
+
+  const handleCategoryClick = (category) => {
+    navigate(`/category/${category}`);
   };
-
-  // Filtra os produtos com base nos filtros selecionados e na categoria
-  const filteredProducts = products.filter(product => {
-    return (
-      (selectedFilters.price === 'all' || product.price <= selectedFilters.price) &&
-      (selectedFilters.size === 'all' || product.size === selectedFilters.size) &&
-      (selectedFilters.color === 'all' || product.color === selectedFilters.color) &&
-      (selectedFilters.brand === 'all' || product.brand === selectedFilters.brand) &&
-      (selectedFilters.rating === 'all' || product.rating >= selectedFilters.rating) &&
-      product.category === category
-    );
-  });
 
   return (
     <Layout>
       <div className="category-page">
-        {/* Título da Categoria */}
-        <h1 className="category-title">{category}</h1>
-        <div className="category-content">
-          {/* Seção de Filtros */}
-          <aside className="filters">
-            <FilterGroup
-              selectedFilters={selectedFilters}
-              onFilterChange={handleFilterChange} // Referência correta da função handleFilterChange
-            />
-          </aside>
-          {/* Listagem de Produtos */}
-          <section className="product-listing">
-            {filteredProducts.map(product => (
-              <ProductCard
-                key={product.id}
-                id={product.id}
-                image={product.image}
-                name={product.name}
-                price={product.price}
-                priceDiscount={product.priceDiscount}
-              />
-            ))}
-          </section>
-        </div>
-        <div className="pagination">
-          {/* Implementar a lógica de paginação ou carregamento infinito aqui */}
-        </div>
+        <h1 className="category-title">Categorias</h1>
+        {categories.map((category, index) => (
+          <Section key={index} title={category.name} titleAlign="center">
+            <div className="category-images">
+              {products
+                .filter(product => product.category === category.name)
+                .slice(0, 1)
+                .map(product => (
+                  <img
+                    key={product.id}
+                    src={category.image}
+                    alt={product.name}
+                    className="category-image"
+                    onClick={() => handleCategoryClick(category.name)}
+                  />
+                ))}
+            </div>
+          </Section>
+        ))}
       </div>
     </Layout>
   );
