@@ -1,19 +1,19 @@
-import React, { useState } from 'react';
-import './styles.css';
-import Layout from '../../components/Layout/Layout';
-import ProductCard from '../../components/ProductCard/ProductCard';
-import FilterGroup from '../../components/FilterGroup/FilterGroup';
-import products from '../../components/ProductData/ProductData';
+import React, { useState } from "react";
+import "./styles.css";
+import Layout from "../../components/Layout/Layout";
+import ProductCard from "../../components/ProductCard/ProductCard";
+import FilterGroup from "../../components/FilterGroup/FilterGroup";
+import products from "../../components/ProductData/ProductData";
 
 const ProductListingPage = () => {
   const [selectedFilters, setSelectedFilters] = useState({
-    price: 'all',
-    size: 'all',
-    color: 'all',
-    category: 'all',
+    price: "all",
+    size: "all",
+    color: "all",
+    category: "all",
   });
 
-  const [sortOrder, setSortOrder] = useState(' ');
+  const [sortOrder, setSortOrder] = useState(" ");
 
   const handleFilterChange = (filterType, value) => {
     setSelectedFilters({
@@ -24,10 +24,10 @@ const ProductListingPage = () => {
 
   const handleClearFilters = () => {
     setSelectedFilters({
-      price: 'all',
-      size: 'all',
-      color: 'all',
-      category: 'all',
+      price: "all",
+      size: "all",
+      color: "all",
+      category: "all",
     });
   };
 
@@ -35,64 +35,72 @@ const ProductListingPage = () => {
     setSortOrder(event.target.value);
   };
 
-  const filteredProducts = products.filter(product => {
+  const filteredProducts = products.filter((product) => {
     return (
-      (selectedFilters.price === 'all' || product.price <= parseFloat(selectedFilters.price)) &&
-      (selectedFilters.size === 'all' || selectedFilters.size === 'all' || product.size === selectedFilters.size) &&
-      (selectedFilters.color === 'all' || product.color === selectedFilters.color) &&
-      (selectedFilters.category === 'all' || product.category === selectedFilters.category)
+      (selectedFilters.price === "all" ||
+        product.price <= parseFloat(selectedFilters.price)) &&
+      (selectedFilters.size === "all" ||
+        selectedFilters.size === "all" ||
+        product.size === selectedFilters.size) &&
+      (selectedFilters.color === "all" ||
+        product.color === selectedFilters.color) &&
+      (selectedFilters.category === "all" ||
+        product.category === selectedFilters.category)
     );
   });
 
   const sortedProducts = filteredProducts.sort((a, b) => {
-    if (sortOrder === 'price-asc') {
+    if (sortOrder === "price-asc") {
       return a.price - b.price;
-    } else if (sortOrder === 'price-desc') {
+    } else if (sortOrder === "price-desc") {
       return b.price - a.price;
     }
     return 0;
   });
 
   const priceOptions = [
-    { text: 'Até R$50', value: '50' },
-    { text: 'Até R$100', value: '100' },
-    { text: 'Até R$200', value: '200' },
+    { text: "Até R$50", value: "50" },
+    { text: "Até R$100", value: "100" },
+    { text: "Até R$200", value: "200" },
   ];
 
   const sizeOptions = [
-    { text: 'P', value: 'P' },
-    { text: 'M', value: 'M' },
-    { text: 'G', value: 'G' },
+    { text: "P", value: "P" },
+    { text: "M", value: "M" },
+    { text: "G", value: "G" },
   ];
 
   const colorOptions = [
-    { text: 'Vermelho', value: 'Vermelho' },
-    { text: 'Azul', value: 'Azul' },
-    { text: 'Verde', value: 'Verde' },
+    { text: "Vermelho", value: "Vermelho" },
+    { text: "Azul", value: "Azul" },
+    { text: "Verde", value: "Verde" },
   ];
 
   const categoryOptions = [
-    { text: 'Camisetas', value: 'Camisetas' },
-    { text: 'Calças', value: 'Calças' },
-    { text: 'Bonés', value: 'Bonés' },
-    { text: 'Headphones', value: 'Headphones' },
-    { text: 'Tênis', value: 'Tênis' },
+    { text: "Camisetas", value: "Camisetas" },
+    { text: "Calças", value: "Calças" },
+    { text: "Bonés", value: "Bonés" },
+    { text: "Headphones", value: "Headphones" },
+    { text: "Tênis", value: "Tênis" },
   ];
 
   return (
     <Layout>
       <div className="product-listing-page">
-        {/* Dropdown de Ordenação */}
         <div className="sorting-dropdown">
           <label htmlFor="sort">Ordenar por:</label>
-          <select id="sort" name="sort" value={sortOrder} onChange={handleSortChange}>
+          <select
+            id="sort"
+            name="sort"
+            value={sortOrder}
+            onChange={handleSortChange}
+          >
             <option value=" ">Nenhum</option>
             <option value="price-asc">Menor Preço</option>
             <option value="price-desc">Maior Preço</option>
           </select>
         </div>
         <div className="product-listing-content">
-          {/* Seção de Filtros */}
           <aside className="filters">
             <FilterGroup
               title="Preço"
@@ -122,12 +130,19 @@ const ProductListingPage = () => {
               selectedFilters={selectedFilters}
               onFilterChange={handleFilterChange}
             />
-            <button className="bt apply-filters" onClick={() => handleFilterChange(selectedFilters)}>Aplicar</button>
-            <button className="bt clear-filters" onClick={handleClearFilters}>Limpar Filtros</button>
+            <button
+              className="bt apply-filters"
+              onClick={() => handleFilterChange(selectedFilters)}
+            >
+              Aplicar
+            </button>
+            <button className="bt clear-filters" onClick={handleClearFilters}>
+              Limpar Filtros
+            </button>
           </aside>
-          {/* Listagem de Produtos */}
+
           <section className="product-listing">
-            {sortedProducts.map(product => (
+            {sortedProducts.map((product) => (
               <ProductCard
                 key={product.id}
                 id={product.id}
@@ -139,9 +154,7 @@ const ProductListingPage = () => {
             ))}
           </section>
         </div>
-        <div className="pagination">
-          {/* Implementar a lógica de paginação ou carregamento infinito aqui */}
-        </div>
+        <div className="pagination"></div>
       </div>
     </Layout>
   );
