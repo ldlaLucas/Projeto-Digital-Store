@@ -64,7 +64,7 @@ const ProductViewPage = () => {
             <p>{product.description}</p>
             {product.options && <ProductOptions options={product.options} />} {/* Verificar se options está definido */}
             <BuyBox id={product.id} name={product.name} image={product.image} price={product.price} priceDiscount={product.priceDiscount} /> {/* Passar a prop name corretamente */}
-            <button onClick={handleBuyClick} className="buy-button">COMPRAR</button>
+            <button onClick={handleBuyClick} className="button buy-button">COMPRAR</button>
           </div>
         </div>
         {/* Detalhes do Produto */}

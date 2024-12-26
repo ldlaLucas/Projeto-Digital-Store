@@ -38,7 +38,7 @@ const BuyPage = () => {
             {product.priceDiscount && <p>Preço com Desconto: R${product.priceDiscount}</p>}
           </div>
         </div>
-        <button onClick={handleConfirmPurchase} className="confirm-button">Confirmar Compra</button>
+        <button onClick={handleConfirmPurchase} className="button-bp confirm-button">Confirmar Compra</button>
       </div>
     </Layout>
   );

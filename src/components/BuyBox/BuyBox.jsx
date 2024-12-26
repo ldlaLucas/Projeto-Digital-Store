@@ -22,7 +22,7 @@ const BuyBox = ({ id, image, name, price, priceDiscount }) => {
         <p className="price">R${price}</p>
       )}
       <div  className="Button-container">
-      <button onClick={handleAddToCart} className="Cart-button">Adicionar ao Carrinho</button>
+      <button onClick={handleAddToCart} className=" button Cart-button">Adicionar ao Carrinho</button>
       </div>
     </div>
   );

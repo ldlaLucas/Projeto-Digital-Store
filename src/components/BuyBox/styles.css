@@ -17,7 +17,7 @@
   color: var(--dark-gray);
 }
 
-button{
+.button{
   width: 220px;
   height: 48px;
   font-weight: bold;

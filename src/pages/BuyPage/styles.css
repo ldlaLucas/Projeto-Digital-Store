@@ -23,7 +23,7 @@
   flex-direction: column;
 }
 
-button{
+.button-bp{
   width: 220px;
   height: 48px;
   font-weight: bold;

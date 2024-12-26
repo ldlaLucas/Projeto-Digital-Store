@@ -15,7 +15,7 @@ const BuySuccess = () => {
       <div className="buy-success">
         <h1>Compra Confirmada!</h1>
         <p>Obrigado por sua compra. Seu pedido foi confirmado com sucesso.</p>
-        <button onClick={handleBackToHome} className="home-button">Voltar para Home</button>
+        <button onClick={handleBackToHome} className="button-bp home-button">Voltar para Home</button>
       </div>
     </Layout>
   );
