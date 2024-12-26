@@ -13,6 +13,8 @@ const ProductListingPage = () => {
     category: 'all',
   });
 
+  const [sortOrder, setSortOrder] = useState(' ');
+
   const handleFilterChange = (filterType, value) => {
     setSelectedFilters({
       ...selectedFilters,
@@ -29,13 +31,26 @@ const ProductListingPage = () => {
     });
   };
 
+  const handleSortChange = (event) => {
+    setSortOrder(event.target.value);
+  };
+
   const filteredProducts = products.filter(product => {
     return (
-      (selectedFilters.price === 'all' || product.price <= selectedFilters.price) &&
-      (selectedFilters.size === 'all' || product.size === selectedFilters.size) &&
+      (selectedFilters.price === 'all' || product.price <= parseFloat(selectedFilters.price)) &&
+      (selectedFilters.size === 'all' || selectedFilters.size === 'all' || product.size === selectedFilters.size) &&
       (selectedFilters.color === 'all' || product.color === selectedFilters.color) &&
       (selectedFilters.category === 'all' || product.category === selectedFilters.category)
     );
+  });
+
+  const sortedProducts = filteredProducts.sort((a, b) => {
+    if (sortOrder === 'price-asc') {
+      return a.price - b.price;
+    } else if (sortOrder === 'price-desc') {
+      return b.price - a.price;
+    }
+    return 0;
   });
 
   const priceOptions = [
@@ -70,9 +85,10 @@ const ProductListingPage = () => {
         {/* Dropdown de Ordenação */}
         <div className="sorting-dropdown">
           <label htmlFor="sort">Ordenar por:</label>
-          <select id="sort" name="sort">
-            <option value="price-asc">Preço: Mais barato</option>
-            <option value="price-desc">Preço: Mais caro</option>
+          <select id="sort" name="sort" value={sortOrder} onChange={handleSortChange}>
+            <option value=" ">Nenhum</option>
+            <option value="price-asc">Menor Preço</option>
+            <option value="price-desc">Maior Preço</option>
           </select>
         </div>
         <div className="product-listing-content">
@@ -111,7 +127,7 @@ const ProductListingPage = () => {
           </aside>
           {/* Listagem de Produtos */}
           <section className="product-listing">
-            {filteredProducts.map(product => (
+            {sortedProducts.map(product => (
               <ProductCard
                 key={product.id}
                 id={product.id}
