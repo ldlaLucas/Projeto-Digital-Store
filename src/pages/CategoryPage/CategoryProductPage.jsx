@@ -57,15 +57,6 @@ const CategoryProductsPage = () => {
               onFilterChange={handleFilterChange}
             />
 
-            <button
-              className="bt apply-filters"
-              onClick={() => handleFilterChange(selectedFilters)}
-            >
-              Aplicar
-            </button>
-            <button className="bt clear-filters" onClick={handleClearFilters}>
-              Limpar Filtros
-            </button>
           </aside>
           <div className="product-listing-category">
             {filteredProducts.map((product) => (

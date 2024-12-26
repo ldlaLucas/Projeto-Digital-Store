@@ -116,25 +116,6 @@
   margin-right: 5px;
 }
 
-/* Estilo para os botões de aplicar e limpar filtros */
-.apply-filters, .clear-filters {
-  margin-top: 10px;
-  padding: 5px 10px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.apply-filters {
-  background-color: var(--primary);
-  color: white;
-}
-
-.clear-filters {
-  background-color: var(--light-gray-2);
-  color: black;
-}
-
 /* Estilo para o dropdown de ordenação */
 .sorting-dropdown {
   margin-bottom: 1rem;
