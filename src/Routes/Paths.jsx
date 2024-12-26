@@ -9,7 +9,7 @@ import NotFound from "../pages/NotFound/NotFound";
 import "./styles.css";
 import BuyPage from "../pages/BuyPage/BuyPage";
 import BuySuccess from "../pages/BuyPage/BuySuccess";
-import CategoryProductPage from "../pages/CategoryPage/CategoryProductPage";
+import CategoryProductsPage from "../pages/CategoryPage/CategoryProductPage";
 
 const Paths = () => {
   return (
@@ -20,7 +20,7 @@ const Paths = () => {
         <Route path="/products" element={<ProductListingPage />} />
         <Route path="/orders" element={<OrdersPage />} />
         <Route path="/categories" element={<CategoryPage />} />
-        <Route path="/categories/:category" element={<CategoryProductPage />} />
+        <Route path="/categories/:category" element={<CategoryProductsPage />} />
         <Route path="/buy" element={<BuyPage />} />
         <Route path="/buy-success" element={<BuySuccess />} />
         <Route path="*" element={<NotFound />} />

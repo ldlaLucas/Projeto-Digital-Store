@@ -6,6 +6,7 @@ const products = [
     price: 49.9,
     category: "Camisetas",
     description: "Descrição da Camiseta 1",
+    size: "G"
   },
   {
     id: 1,
@@ -14,6 +15,7 @@ const products = [
     price: 99.9,
     category: "Calças",
     description: "Descrição da Calça 1",
+    size: "M"
   },
   {
     id: 2,
@@ -22,6 +24,7 @@ const products = [
     price: 29.9,
     category: "Bonés",
     description: "Descrição do Boné 1",
+    size: "P"
   },
   {
     id: 3,
@@ -30,6 +33,7 @@ const products = [
     price: 199.9,
     category: "Headphones",
     description: "Descrição do Headphone 1",
+    size: "G"
   },
   {
     id: 4,
@@ -38,6 +42,7 @@ const products = [
     price: 149.9,
     category: "Tênis",
     description: "Descrição do Tênis 1",
+    size: "M"
   },
   {
     id: 5,
@@ -46,6 +51,7 @@ const products = [
     price: 149.9,
     category: "Tênis",
     description: "Descrição do Tênis 1",
+    size: "P"
   },
   {
     id: 6,
@@ -55,6 +61,7 @@ const products = [
     priceDiscount: 130.50,
     category: "Tênis",
     description: "Descrição do Tênis 1",
+    size: "G"
   },
 
   {
@@ -64,6 +71,7 @@ const products = [
     price: 49.9,
     category: "Camisetas",
     description: "Descrição da Camiseta 1",
+    size: "M"
   },
   {
     id: 8,
@@ -72,6 +80,8 @@ const products = [
     price: 99.9,
     category: "Calças",
     description: "Descrição da Calça 1",
+    size: "G",
+    color: "Verde"
   },
   {
     id: 9,
@@ -80,6 +90,7 @@ const products = [
     price: 29.9,
     category: "Bonés",
     description: "Descrição do Boné 1",
+    size: "M"
   },
   {
     id: 10,
@@ -88,6 +99,7 @@ const products = [
     price: 199.9,
     category: "Headphones",
     description: "Descrição do Headphone 1",
+    size: "M"
   },
   {
     id: 11,
@@ -96,6 +108,8 @@ const products = [
     price: 149.9,
     category: "Tênis",
     description: "Descrição do Tênis 1",
+    color: "Azul",
+    size: "M"
   },
   {
     id: 12,
@@ -104,6 +118,7 @@ const products = [
     price: 149.9,
     category: "Tênis",
     description: "Descrição do Tênis 1",
+    size: "M"
   },
   {
     id: 13,
@@ -112,6 +127,8 @@ const products = [
     price: 149.9,
     category: "Tênis",
     description: "Descrição do Tênis 1",
+    color: "Vermelho",
+    size: "P"
   },
 ];
 
