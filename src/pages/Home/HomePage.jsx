@@ -35,8 +35,8 @@ const HomePage = () => {
             <img src="public/collection-1.png" className="collection-image" />
           </div>
         </Section>
-        {/* Seção: Categorias em destaque */}
-        <Section title="Coleção em Destaque" titleAlign="center" >
+
+        <Section title="Coleção em Destaque" titleAlign="center">
           <div className="collection-category">
             <img
               src="../src/assets/categoryIcons/Frame-10.svg"
@@ -72,8 +72,9 @@ const HomePage = () => {
         </Section>
         <Section
           title="Produtos em alta"
-          titleAlign="left"
+          titleAlign=""
           link={{ text: "Ver todos ->", href: "/products" }}
+          className="PrtAlta-container"
         >
           <ProductListing products={products.slice(0, 8)} />
         </Section>
