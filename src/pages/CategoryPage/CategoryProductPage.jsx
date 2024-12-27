@@ -10,7 +10,7 @@ const CategoryProductsPage = () => {
   const { category } = useParams();
   const [selectedFilters, setSelectedFilters] = useState({
     price: "all",
-    category: "all",
+    category: category,
   });
 
   const handleFilterChange = (filterType, value) => {
@@ -23,17 +23,15 @@ const CategoryProductsPage = () => {
   const handleClearFilters = () => {
     setSelectedFilters({
       price: "all",
-      category: "all",
+      category: category,
     });
   };
 
   const filteredProducts = products.filter((product) => {
     return (
       (selectedFilters.price === "all" ||
-        product.price <= selectedFilters.price) &&
-      (selectedFilters.category === "all" ||
-        product.category === selectedFilters.category) &&
-      product.category === category
+        product.price <= parseFloat(selectedFilters.price)) &&
+      product.category === selectedFilters.category
     );
   });
 
@@ -50,13 +48,16 @@ const CategoryProductsPage = () => {
         <div className="category-container">
           <aside className="filters">
             <FilterGroup
-              title="Preço"
+              nameTitle="Preço"
+              title="price"
               inputType="radio"
               options={priceOptions}
               selectedFilters={selectedFilters}
               onFilterChange={handleFilterChange}
             />
-
+            <button className="bt clear-filters" onClick={handleClearFilters}>
+              Limpar Filtros
+            </button>
           </aside>
           <div className="product-listing-category">
             {filteredProducts.map((product) => (

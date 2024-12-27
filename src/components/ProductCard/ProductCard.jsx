@@ -15,17 +15,19 @@ const ProductCard = ({ id, image, name, price, priceDiscount }) => {
 
   return (
     <div className="product-card" onClick={() => navigate(`/product/${id}`)}>
-      <img src={image} alt={name} />
-      <h3>{name}</h3>
-      {priceDiscount ? (
-        <>
-          <p className="price original">R${price}</p>
-          <p className="price discount">R${priceDiscount}</p>
-        </>
-      ) : (
-        <p className="price">R${price}</p>
-      )}
-      <button onClick={handleAddToCart}>Adicionar ao Carrinho</button>
+      <div className="container">
+        <img src={image} alt={name} />
+        <h3>{name}</h3>
+        {priceDiscount ? (
+          <>
+            <p className="price original">R${price}</p>
+            <p className="price discount">R${priceDiscount}</p>
+          </>
+        ) : (
+          <p className="price">R${price}</p>
+        )}
+        <button onClick={handleAddToCart}>Adicionar ao Carrinho</button>
+      </div>
     </div>
   );
 };
