@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './styles.css';
 
-const FilterGroup = ({ title, inputType, options }) => {
+const FilterGroup = ({ nameTitle,title, inputType, options, selectedFilters, onFilterChange }) => {
   return (
     <div className="filter-group">
-      <h3 className="filter-group-title">{title}</h3>
+      <h3 className="filter-group-title">{nameTitle}</h3>
       <div className="filter-options">
         {Array.isArray(options) && options.map((option, index) => (
           <div key={index} className="filter-option">
@@ -14,6 +14,9 @@ const FilterGroup = ({ title, inputType, options }) => {
               id={option.value || option.text}
               name={title}
               value={option.value || option.text}
+              checked={selectedFilters[title] === (option.value || option.text)}
+              onChange={() => onFilterChange(title, option.value || option.text)}
+              className="filter-input"
             />
             <label htmlFor={option.value || option.text}>{option.text}</label>
           </div>
@@ -32,6 +35,8 @@ FilterGroup.propTypes = {
       value: PropTypes.string,
     })
   ).isRequired,
+  selectedFilters: PropTypes.object.isRequired,
+  onFilterChange: PropTypes.func.isRequired,
 };
 
 export default FilterGroup;

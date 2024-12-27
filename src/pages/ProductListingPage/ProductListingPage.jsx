@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import "./styles.css";
 import Layout from "../../components/Layout/Layout";
 import ProductCard from "../../components/ProductCard/ProductCard";
@@ -14,6 +15,19 @@ const ProductListingPage = () => {
   });
 
   const [sortOrder, setSortOrder] = useState(" ");
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const filter = params.get("filter");
+    if (filter) {
+      setSelectedFilters((prevFilters) => ({
+        ...prevFilters,
+        category: filter,
+      }));
+    }
+  }, [location.search]);
 
   const handleFilterChange = (filterType, value) => {
     setSelectedFilters({
@@ -29,10 +43,21 @@ const ProductListingPage = () => {
       color: "all",
       category: "all",
     });
+    navigate("/products");
   };
 
   const handleSortChange = (event) => {
     setSortOrder(event.target.value);
+  };
+
+  const handleApplyFilters = () => {
+    const filterParams = new URLSearchParams();
+    Object.keys(selectedFilters).forEach((key) => {
+      if (selectedFilters[key] !== "all") {
+        filterParams.append(key, selectedFilters[key]);
+      }
+    });
+    navigate(`/products?${filterParams.toString()}`);
   };
 
   const filteredProducts = products.filter((product) => {
@@ -40,12 +65,11 @@ const ProductListingPage = () => {
       (selectedFilters.price === "all" ||
         product.price <= parseFloat(selectedFilters.price)) &&
       (selectedFilters.size === "all" ||
-        selectedFilters.size === "all" ||
         product.size === selectedFilters.size) &&
       (selectedFilters.color === "all" ||
         product.color === selectedFilters.color) &&
       (selectedFilters.category === "all" ||
-        product.category === selectedFilters.category)
+        product.category.toLowerCase().includes(selectedFilters.category.toLowerCase()))
     );
   });
 
@@ -103,28 +127,32 @@ const ProductListingPage = () => {
         <div className="product-listing-content">
           <aside className="filters">
             <FilterGroup
-              title="Preço"
+              nameTitle="Preço"
+              title="filter"
               inputType="radio"
               options={priceOptions}
               selectedFilters={selectedFilters}
               onFilterChange={handleFilterChange}
             />
             <FilterGroup
-              title="Tamanho"
+              nameTitle="Tamanho"
+              title="filter"
               inputType="checkbox"
               options={sizeOptions}
               selectedFilters={selectedFilters}
               onFilterChange={handleFilterChange}
             />
             <FilterGroup
-              title="Cor"
+              nameTitle="Cor"
+              title="filter"
               inputType="checkbox"
               options={colorOptions}
               selectedFilters={selectedFilters}
               onFilterChange={handleFilterChange}
             />
             <FilterGroup
-              title="Categoria"
+              nameTitle="Categoria"
+              title="filter"
               inputType="radio"
               options={categoryOptions}
               selectedFilters={selectedFilters}
@@ -132,7 +160,7 @@ const ProductListingPage = () => {
             />
             <button
               className="bt apply-filters"
-              onClick={() => handleFilterChange(selectedFilters)}
+              onClick={handleApplyFilters}
             >
               Aplicar
             </button>

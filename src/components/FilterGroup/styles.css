@@ -19,6 +19,9 @@
   margin-bottom: 5px;
 }
 
-.filter-option input {
-  margin-right: 5px;
+.filter-input {
+  width: 22px;
+  height: 22px;
+  margin-right: 10px;
+  background-color: var(--primary);
 }
