@@ -56,6 +56,7 @@ src/
 │   ├── ProductDetails/
 │   ├── Layout/
 |   ├── ProductData/
+|   ├── MyProducts/
 │   └── Gallery/
 ├── pages/
 │   ├── Home/
