@@ -91,11 +91,11 @@ E-mail: henrique.pedro62@aluno.ifce.com
 
 E-mail: steiciealeixosousa@gmail.com
 
-LinkedIn: https://www.linkedin.com/in/lucas-augusto-a752872b5
+LinkedIn: [Lucas Augusto]( https://www.linkedin.com/in/lucas-augusto-a752872b5LinkedIn)
 
-LinkedIn: https://www.linkedin.com/in/-dev-suporte-profissional-ti-pedro-b2680a302/
+LinkedIn: [Pedro Henrique](https://www.linkedin.com/in/-dev-suporte-profissional-ti-pedro-b2680a302/)
 
-Linkedin: https://www.linkedin.com/in/steicie-aleixo-sousa-6053231a7/
+LinkedIn: [Steicie Aleixo](https://www.linkedin.com/in/steicie-aleixo-sousa-6053231a7/)
 
 ---
 
