@@ -20,7 +20,14 @@ const Header = () => {
         <Search />
         <div className="auth-buttons">
           <button className="register-button">Cadastrar</button>
-          <button className="login-button">Entrar</button>
+           <button
+            className="login-button"
+             <button
+            className="login-button"
+            onClick={() => (window.location.href = "../../../public/login/login.html" )}
+          >
+            Entrar
+          </button>
           <div
             className="icon-with-indicator"
             onClick={() => navigate("/orders")}
