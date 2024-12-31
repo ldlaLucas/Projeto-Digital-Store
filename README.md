@@ -107,4 +107,3 @@ Obrigado por conferir nosso projeto! Esperamos que você aproveite a experiênci
 
 💻 Desenvolvido por Lucas Augusto, Pedro Henrique e Steicie Aleixo! 
 
-```
