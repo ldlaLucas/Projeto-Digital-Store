@@ -20,11 +20,9 @@ const Header = () => {
         <Search />
         <div className="auth-buttons">
           <button className="register-button">Cadastrar</button>
-           <button
+          <button
             className="login-button"
-             <button
-            className="login-button"
-            onClick={() => (window.location.href = "../../../public/login/login.html" )}
+            onClick={() => (window.location.href = "../../../public/login/login.html")}
           >
             Entrar
           </button>
@@ -32,7 +30,7 @@ const Header = () => {
             className="icon-with-indicator"
             onClick={() => navigate("/orders")}
           >
-            <span className="indicator ">{cartItems.length}</span>
+            <span className="indicator">{cartItems.length}</span>
             <i className="icon pi pi-shopping-cart" />
           </div>
         </div>
